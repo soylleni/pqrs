@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PQRS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a href="" class="navbar-brand mx-auto">PQRS</a>
+    </nav>
+
+    <div class="container">
+
+    <div class="row">
+      
+      <div class="col-md-8 mt-4 card">
+        <form class="card-body" action="/pqrs" method="post">
+
+          <h3 class="card-title">Crear PQRS</h3>
+          <h5 class="card-title">En MaxSport hemos habilitado un espacio para sus peticiones, quejas, 
+            reclamos y sugerencias a través de este formulario. Llene los datos y nos comunicaremos con usted.</h5>
+
+          <div class="form-group">
+            <input name="documento" type="text" class="form-control" placeholder="Documento de identidad">
+          </div>
+          <div>
+          <select name="tipo_documento" >
+            <option value="CC" selected>Cédula de Ciudadanía</option>
+            <option value="TI">Tarjeta de Identidad</option>
+            <option value="CE">Cédula de Extranjería</option>
+          </select>        
+          </div>
+
+          <div class="form-group">
+            <input name="nombre_solic" type="text" class="form-control" placeholder="Nombre del Solicitante">
+          </div>
+          <div class="form-group">
+            <input name="apellido_solic" type="text" class="form-control" placeholder="Apellido del Solicitante">
+          </div>
+          <div class="form-group">
+            <input name="celular_solic" type="text" class="form-control" placeholder="Número celular del Solicitante">
+          </div>
+          <div class="form-group">
+            <input name="fijo_solic" type="text" class="form-control" placeholder="Número fijo del Solicitante">
+          </div>
+          <div class="form-group">
+            <input name="email_solic" type="text" class="form-control" placeholder="Correo del Solicitante">
+          </div>
+          <div class="form-group">
+            <input name="pqrs_titulo" type="text" class="form-control" placeholder="Título de la PQRS">
+          </div>
+          <div>
+          <select name="pqrs_tipo">
+            <option value="Petición" selected>Petición</option>
+            <option value="Queja">Queja</option>
+            <option value="Reclamo">Reclamo</option>
+          </select>
+          
+          
+        </div>
+          <div class="form-group">
+            <input name="pqrs_cuerpo" type="text" class="form-control" placeholder="Justificación de la PQRS">
+          </div>
+          <div class="form-group">
+            <input name="pqrs_estado" type="text" class="form-control" placeholder="Estado de la PQRS">
+          </div>
+          <input type="submit" class="btn btn-primary">
+        </form>
+      </div>
+    </div>
+    </div>
+  </body>
+  <footer>
+    <center>
+    <p>MaxSport 2023</p>
+        <a href="/login" class="button"><font size="10">Portal Admin</font></a>
+    </center>    
+  </footer>
+</html>
