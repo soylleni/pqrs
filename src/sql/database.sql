@@ -1,4 +1,8 @@
+CREATE SCHEMA pqrs;
+
 CREATE DATABASE pqrs;
+
+CREATE DATABASE usuario;
 
 USE pqrs;
 
@@ -17,14 +21,25 @@ CREATE TABLE `pqrs`.`pqrs` (
   `pqrs_estado` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idpqrs`));
 
+  CREATE TABLE `pqrs`.`usuario` (
+  `idusuario` INT NOT NULL AUTO_INCREMENT,
+  `userName` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idusuario`));
 
-INSERT INTO pqrs(idpqrs, documento,tipo_documento,nombre_solic, 
-apellido_solic, celular_solic, fijo_solic, email_solic, pqrs_titulo,
-pqrs_tipo, pqrs_cuerpo, pqrs_estado) VALUES ('1030738278', 'CE', 
+
+
+INSERT INTO `pqrs`. `pqrs`(`idpqrs`, `documento`, `tipo_documento`, `nombre_solic`, 
+`apellido_solic`, `celular_solic`, `fijo_solic`, `email_solic`, `pqrs_titulo`,
+`pqrs_tipo`, `pqrs_cuerpo`, `pqrs_estado`) VALUES ('1030738278', 'CE', 
 'Trinidad', 'Villanueva Molina','3054914988', '6016638992',
 'slaff@icloud.com',	'Petición de devolución de dinero',	'Petición',
 'Quiero que me devuelvan el dinero por daño en par de zapatos comprados',
 'Activa')
 
-SELECT * FROM pqrs;
+INSERT INTO `pqrs`.`usuario` (`idusuario`, `userName`, `password`) VALUES
+ ('1', 'manuel123', 'yThu!!tQX!');
+
+SELECT * FROM pqrs.pqrs;
+SELECT * FROM pqrs.usuario;
 
